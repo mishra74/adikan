@@ -18,8 +18,8 @@
                                 <div class="col-xl-6  col-md-6 mb-4">
                                     <label class="form-label font-w600">Product Name<span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="text" class="form-control solid" name="course_name"
-                                        id="title" placeholder="Course Name" value="{{ old('course_name') }}"
+                                    <input type="text" class="form-control solid" name="product_name"
+                                        id="title" placeholder="Course Name" value="{{ old('product_name') }}"
                                         aria-label="title">
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
@@ -28,8 +28,8 @@
                                 <div class="col-xl-6  col-md-6 mb-4">
                                     <label class="form-label font-w600"> Product Discriptions <span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="text" class="form-control solid" name="totalDayInWeek"
-                                        id="totalDayInWeek" placeholder="time" value="{{ old('totalDayInWeek') }}"
+                                    <input type="text" class="form-control solid" name="product_disc"
+                                        id="totalDayInWeek" placeholder="time" value="{{ old('product_disc') }}"
                                         aria-label="totalDayInWeek">
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
@@ -37,16 +37,16 @@
                                 <div class="col-xl-6  col-md-6 mb-4">
                                     <label class="form-label font-w600"> Quantity<span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="number" class="form-control solid" name="CourseDuration"
-                                        id="title" placeholder="Course Duration" value="{{ old('mode') }}"
+                                    <input type="number" class="form-control solid" name="quantity"
+                                        id="title" placeholder="Course Duration" value="{{ old('quantity') }}"
                                         aria-label="title">
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
                                 <div class="col-xl-6  col-md-6 mb-4">
                                     <label class="form-label font-w600"> Date of Expiry<span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="date" class="form-control solid" name="exdate"
-                                        id="mode" placeholder="Date of Expiry" value="{{ old('mode') }}"
+                                    <input type="date" class="form-control solid" name="dateofexpire"
+                                        id="mode" placeholder="Date of Expiry" value="{{ old('dateofexpire') }}"
                                         aria-label="title" />
                                        
                                

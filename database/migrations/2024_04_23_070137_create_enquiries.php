@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('enquiries', function (Blueprint $table) {
             $table->id();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->string('course');
+            $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('msg');
+            $table->string('product_id');
+            $table->string('city');
+            $table->string('zip');
+            $table->string('details');
             $table->timestamps();
         });
     }

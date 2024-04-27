@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class enquiry extends Model
+class career extends Model
 {
     use HasFactory;
-    protected $fillable=['name', 'email', 'phone', 'product_id', 'city', 'zip', 'details'];
+    protected $fillable=['name', 'email', 'phone', 'applyfor', 'resume', 'city', 'zip', 'details'];
 }

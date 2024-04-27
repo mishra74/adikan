@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\enquiry;
+use App\Models\career;
 use App\Models\contactus;
 use Illuminate\Http\Request;
 
@@ -33,6 +34,11 @@ class homeController extends Controller
         contactus::create($request->all());
 
         return redirect()->back();
+
+    }
+    function careerlist(){
+        $data=career::all();
+        return view('admin.career.index',compact('data'));
 
     }
     

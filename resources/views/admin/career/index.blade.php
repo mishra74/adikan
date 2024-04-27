@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 @section('title')
-    Views Productss
+    Views Enquiry
 @endsection
 @section('content')
     <div class="container">
@@ -10,10 +10,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Products</h4>
-                          <a href="{{ route('course.form') }}" type="button" class="btn btn-rounded btn-primary"><span
-                                class="btn-icon-start text-info"><i class="fa fa-plus color-info"></i>
-                            </span>Create New</a>
+                        <h4 class="card-title">Career</h4>
+                       
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -21,26 +19,31 @@
                                 <thead>
                                     <tr>
                                         <th>S No</th>
-                                        <th>Postor</th>
-                                        <th>Product Name</th>
-                                        <th>Product Discription</th>
-                                        <th>Quantity</th>
-                                        <th>Date of Expire</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Apply for</th>
+                                        <th>Resume</th>
+                                        <th>City</th>
+                                        <th>Zip</th>
+                                        <th>Additional Details</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                  <tbody>
                                     
-                                    @foreach ($course as $category)
-                                        <tr>
+                                    @foreach ($data as $category)
+                                        <tr>   
                                             <td>{{ ++$loop->index }}</td>
-                                            <td><img src="{{ $category->product_image }}" width="100" height="100" /></td>
-                                            <td>{{ $category->product_name }}</td>
-                                            <td> {{$category->product_disc}}</td>
-                                            <td> {{$category->quantity}}</td>
-                                            <td> {{$category->dateofexpire}}</td>
-                                     
-                                            <td>{{ $category->mode }}</td>
+                                            <td>{{ $category->name }}</td>
+                                       
+                                            <td>{{ $category->email }}</td>
+                                            <td>{{ $category->phone }}</td>
+                                            <td>{{ $category->applyfor }}</td>
+                                            <td>{{ $category->resume }}</td>
+                                            <td>{{ $category->city }}</td>
+                                            <td>{{ $category->zip }}</td>
+                                            <td>{{ $category->details }}</td>
 
                                             @if($category->status == 'active')
                                             <td><span class="badge badge-success badge-lg light">Active</span>
@@ -51,7 +54,7 @@
 
                                            <td>
 											<div class="action-buttons d-flex justify-content-end">
-												<a href="{{route('course.edit',$category->id)}}" class="btn btn-secondary light mr-2">
+												<a href="{{route('blogs.edit',$category->id)}}" class="btn btn-secondary light mr-2">
 													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
 														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 															<rect x="0" y="0" width="24" height="24"></rect>
@@ -60,7 +63,7 @@
 														</g>
 													</svg>
 												</a> 
-												<a href="{{route('course.delete',$category->id)}}" class="delete-item" data-id="{{ $category->id }}" class="btn btn-danger light">
+												<a href="{{route('blogs.delete',$category->id)}}" class="delete-item" data-id="{{ $category->id }}" class="btn btn-danger light">
 													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
 														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 															<rect x="0" y="0" width="24" height="24"></rect>

@@ -85,7 +85,7 @@
                         <ul aria-expanded="false">
                             <li><a href="{{url('enquiry')}}">Enquiry</a></li>
 							<li><a href="{{url('contactus')}}">Contact us</a></li>
-							<li><a href="{{url('enquiry')}}">Career</a></li>
+							<li><a href="{{route('career.list')}}">Career</a></li>
                         </ul>
                     </li>
                    

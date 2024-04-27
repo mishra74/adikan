@@ -16,70 +16,50 @@
                             <div class="row">
                                 
                                 <div class="col-xl-6  col-md-6 mb-4">
-                                    <label class="form-label font-w600">Course Name<span
+                                    <label class="form-label font-w600">Product Name<span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="text" class="form-control solid" name="course_name"
-                                        id="title" placeholder="Course Name" value="{{ $data->course_name }}"
+                                    <input type="text" class="form-control solid" name="product_name"
+                                        id="title" placeholder="Course Name" value="{{ $data->product_name }}"
                                         aria-label="title">
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
+                                
+                               
                                 <div class="col-xl-6  col-md-6 mb-4">
-                                    <label class="form-label font-w600"> Start On<span
+                                    <label class="form-label font-w600"> Product Discriptions <span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="date" class="form-control solid" name="startOn"
-                                        id="startOn" placeholder="start On" value="{{ $data->startOn }}"
-                                        aria-label="startOn">
-                                        <p class="text-danger" id="name-error"></p>
-                                </div>
-                                <div class="col-xl-6  col-md-6 mb-4">
-                                    <label class="form-label font-w600"> Time<span
-                                            class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="time" class="form-control solid" name="time"
-                                        id="title" placeholder="time" value="{{ $data->time }}"
-                                        aria-label="title">
-                                        <p class="text-danger" id="name-error"></p>
-                                </div>
-                                <div class="col-xl-6  col-md-6 mb-4">
-                                    <label class="form-label font-w600"> Total Days in week<span
-                                            class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="text" class="form-control solid" name="totalDayInWeek"
-                                        id="totalDayInWeek" placeholder="time" value="{{ $data->totalDayInWeek }}"
+                                    <input type="text" class="form-control solid" name="product_disc"
+                                        id="totalDayInWeek" placeholder="time" value="{{ $data->product_disc }}"
                                         aria-label="totalDayInWeek">
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
                                 
                                 <div class="col-xl-6  col-md-6 mb-4">
-                                    <label class="form-label font-w600"> Course Duration<span
+                                    <label class="form-label font-w600"> Quantity<span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <input type="number" class="form-control solid" name="CourseDuration"
-                                        id="title" placeholder="Course Duration" value="{{$data->CourseDuration}}"
+                                    <input type="number" class="form-control solid" name="quantity"
+                                        id="title" placeholder="Course Duration" value="{{ $data->quantity }}"
                                         aria-label="title">
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
                                 <div class="col-xl-6  col-md-6 mb-4">
-                                    <label class="form-label font-w600"> Mode<span
+                                    <label class="form-label font-w600"> Date of Expiry<span
                                             class="text-danger scale5 ms-2">*</span></label>
-                                    <select type="time" class="form-control solid" name="mode"
-                                        id="mode" placeholder="mode" value="{{ old('mode') }}"
-                                        aria-label="title">
-                                        <option>{{$data->mode}}</option>
-                                        <option>Online</option>
-                                        <option>Offline</option>
-                                    </select>
+                                    <input type="date" class="form-control solid" name="dateofexpire"
+                                        id="mode" placeholder="Date of Expiry" value="{{ $data->dateofexpire }}"
+                                        aria-label="title" />
+                                       
+                               
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
                                  <div class="col-xl-6  col-md-6 mb-4">
-                                    <label class="form-label font-w600">Image<span
+                                    <label class="form-label font-w600">Product Image<span
                                             class="text-danger scale5 ms-2">*</span></label>
                                     <input type="file" class="form-control solid" name="image"
-                                        id="link" placeholder="link" value="{{ old('image') }}"
+                                        id="link" placeholder="link" value="{{ $data->image }}"
                                         aria-label="link">
                                         <p class="text-danger" id="name-error"></p>
                                 </div>
-                                
-                                
-                                
-                               
                             </div>
                             <div>
                                 <span>Status:</span>

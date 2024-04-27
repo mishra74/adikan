@@ -48,6 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/blogslist-delete/{id}', [blogController::class, 'blogsdelete'])->name('blogs.delete');
     //enquiry
     Route::get('/enquiry', [homeController::class, 'enquirylist'])->name('enquiry.list');
+    Route::get('/career', [homeController::class, 'careerlist'])->name('career.list');
     Route::get('/contactus', [homeController::class, 'contactuslist'])->name('contactus.list');
     //course
     Route::get('/courseslist', [courseController::class, 'courselist'])->name('course.list');

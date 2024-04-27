@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\course;
+use App\Models\product;
 
 class courseController extends Controller
 {
     function courselist(Request $request){
-        $course=course::all();
+        $course=product::all();
            return view('admin.course.index',compact('course'));
         }
         function courselist_form(){
@@ -21,15 +21,13 @@ class courseController extends Controller
                 $request->file('image')->move(public_path('gallary/'), $img_name);
                 $imagePath = 'gallary/' . $img_name;
         
-                course::create([
-                    'image' => $imagePath,
-                    'course_name'=>$request->course_name,
-                    'startOn'=> $request->startOn,
-                    'time'=>$request->time,
-                    'totalDayInWeek'=>$request->totalDayInWeek,
-                    'CourseDuration'=>$request->CourseDuration,
-                     'mode'=>$request->mode,
-                      'status'=>true,
+                product::create([
+                    'product_image' => $imagePath,
+                    'product_name'=>$request->product_name,
+                    'product_disc'=> $request->product_disc,
+                    'quantity'=>$request->quantity,
+                    'dateofexpire'=>$request->dateofexpire,
+                    'status'=>true,
                     
                 ]);
         
@@ -55,28 +53,27 @@ class courseController extends Controller
 
        
         function course_edit(Request $request, $id){
-            $data=course::find($id);
+            $data=product::find($id);
 return view('admin.course.edit',compact('data'));
         }
         function course_editsave(Request $request, $id){
            
-              $course=course::find($id);
+              $product=product::find($id);
              
               if ($request->hasFile('image')) {
                 $img_name = 'gallayImage_' . time() . '.' . $request->file('image')->getClientOriginalExtension();
                 $request->file('image')->move(public_path('gallary/'), $img_name);
                 $imagePath = 'gallary/' . $img_name;
-                $course->image =$imagePath;
+                $product->image =$imagePath;
             }
-              $course->course_name=$request->course_name;
-              $course->startOn= $request->startOn;
-              $course->time=$request->time;
-              $course->totalDayInWeek=$request->totalDayInWeek;
-              $course->CourseDuration=$request->CourseDuration;
-              $course->mode=$request->mode;
-              $course->status=true;
+            $product->product_image =$imagePath;
+            $product->product_name=$request->product_name;
+            $product->product_disc=$request->product_disc;
+            $product->quantity=$request->quantity;
+            $product->dateofexpire=$request->dateofexpire;
+            $product->status=true;
                     
-              $course->save();
+              $product->save();
         
                 $data = [
                     'message' => 'Success',
